@@ -57,8 +57,8 @@ CREATE TABLE listings (
   PRIMARY KEY  (listing_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE INDEX index_Customer_ID_First_name
-ON Customer (Customer_ID, First_name);
+CREATE INDEX index_listing_id_scrape_id
+ON Customer (listing_id, scrape_id );
 
 
 
