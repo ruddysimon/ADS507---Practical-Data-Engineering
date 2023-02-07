@@ -22,3 +22,30 @@ The Airbnb Seattle dataset is a collection of information about Seattle, Washing
 - Hoori Javadnia   
 - Dennis Myasnyankin
 - Ruddy Simonpour 
+
+---
+
+### Prerequisites
+Setup your environement and install project dependencies
+```
+conda create -n "your env name" python=3.10
+source activate "your env name"
+
+import pandas as pd
+import numpy as np
+import pymysql as mysql
+import matplotlib.pyplot as plt
+import os
+import warnings
+import getpass # To hide your local password
+
+# Integrate your python environment to MySQL database.
+conn = mysql.connect(host='localhost',
+                    port = int(3306),
+                    user = '****',
+                    passwd=getpass.getpass('Enter password:'),
+                    db="sakila")
+
+df = pd.read_sql_query("Show tables ", conn)
+```
+
