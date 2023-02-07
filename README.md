@@ -9,7 +9,6 @@
 
 <h3 align="center">Airbnb Seattle</h3>
 
-<div align="center">
 
 --- 
 
