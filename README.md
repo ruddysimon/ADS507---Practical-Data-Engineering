@@ -44,7 +44,7 @@ conn = mysql.connect(host='localhost',
                     port = int(3306),
                     user = '****',
                     passwd=getpass.getpass('Enter password:'),
-                    db="sakila")
+                    db="your database")
 
 df = pd.read_sql_query("Show tables ", conn)
 ```
