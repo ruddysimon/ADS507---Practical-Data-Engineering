@@ -55,9 +55,9 @@ df = pd.read_sql_query("Show tables ", conn)
 Project_folder /
 ├── README.md /
 ├── Src /
-├── ├── listings.csv
-├── ├── Reviews.csv
-├── ├── Calendar.csv
+|   ├── listings.csv
+|   ├── Reviews.csv
+|   ├── Calendar.csv
 ├── Notebooks /
 ├── ├── Data_Imporing
 ├── ├── Airbnb_Seattle_preprocessing
