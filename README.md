@@ -32,9 +32,7 @@ conda create -n "your env name" python=3.10
 source activate "your env name"
 
 import pandas as pd
-import numpy as np
 import pymysql as mysql
-import matplotlib.pyplot as plt
 import os
 import warnings
 import getpass # To hide your local password
