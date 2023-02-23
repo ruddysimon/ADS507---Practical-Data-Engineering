@@ -52,13 +52,14 @@ df = pd.read_sql_query("Show tables ", conn)
 
 # Project Tree
 
-Project_folder /
-├── README.md /
-├── Src /
-|   ├── listings.csv
-|   ├── Reviews.csv
-|   ├── Calendar.csv
-├── Notebooks /
-├── ├── Data_Imporing
-├── ├── Airbnb_Seattle_preprocessing
-├── ├── Airbnb_Seattle_Model_Creation
+├── README.md  
+├── src   
+│   ├── Listings.csv  
+│   ├── Reviews.csv  
+│   └── Calendar.csv  
+├── notebooks  
+│   ├── Data_importing.ipynb  
+│   ├── Airbnb_Seattle_Preprocessing.ipynb  
+│   ├── Airbnb_Seattle_Model_Creation.ipynb  
+ 
+ß
