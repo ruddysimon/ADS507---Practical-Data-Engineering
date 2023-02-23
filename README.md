@@ -48,4 +48,17 @@ conn = mysql.connect(host='localhost',
 
 df = pd.read_sql_query("Show tables ", conn)
 ```
+---
 
+# Project Tree
+
+Project_folder /
+├── README.md /
+├── Src /
+├── ├── listings.csv
+├── ├── Reviews.csv
+├── ├── Calendar.csv
+├── Notebooks /
+├── ├── Data_Imporing
+├── ├── Airbnb_Seattle_preprocessing
+├── ├── Airbnb_Seattle_Model_Creation
