@@ -25,7 +25,7 @@ The Airbnb Seattle dataset is a collection of information about Seattle, Washing
 
 ---
 
-### Prerequisites
+## Prerequisites
 Setup your environement and install project dependencies
 ```
 conda create -n "your env name" python=3.10
@@ -50,8 +50,8 @@ df = pd.read_sql_query("Show tables ", conn)
 ```
 ---
 
-# Project Tree
-
+## Project Tree
+```
 |- README.md \  
 |- Src \   
 |-     |- Listings.csv  
@@ -61,4 +61,4 @@ df = pd.read_sql_query("Show tables ", conn)
 |-     |- Data_Importing.ipynb  
 |-     |- Airbnb_Seattle_Preprocessing.ipynb  
 |-     |- Airbnb_Seattle_Model_Creation.ipynb  
- 
+```
