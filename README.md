@@ -28,7 +28,7 @@ The Airbnb Seattle dataset is a collection of information about Seattle, Washing
 ## Prerequisites
 Setup your environement and install project dependencies
 ```
-conda create -n "your env name" python=3.10
+conda create -n "your env name" python=3.9
 source activate "your env name"
 
 import pandas as pd
