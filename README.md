@@ -62,10 +62,10 @@ df = pd.read_sql_query("Show tables ", conn)
 ```
 
 ## Data Source
-```
+
 The dataset has 3 different CSV files:
 
 - **Calendar**: This dataset consists of 1.4 million rows and 4 columns. It covers the listing IDs of properties, dates, availability of the property, and the daily price of staying at the property. This dataset can be used to analyze the availability and pricing patterns of the properties listed.<br>
 - **Listings**: This dataset consists of 3,818 rows and 92 columns. It covers various aspects of each listing, such as descriptions and details of the property and host, review scores, location, amenities, etc. This dataset can be used to analyze the characteristics of the listed properties and their hosts.<br>
 - **Reviews**: This dataset consists of 84,849 rows and 6 columns. It focuses on written reviews for stays at each property. This dataset can be used to analyze the feedback and opinions of the guests who have stayed at the listed properties.
-```
+
