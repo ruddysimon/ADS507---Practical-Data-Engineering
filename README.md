@@ -28,14 +28,23 @@ The Airbnb Seattle dataset is a collection of information about Seattle, Washing
 ## Prerequisites
 Setup your environement and install project dependencies
 ```
+### Create your pandas env
 conda create -n "your env name" python=3.9
 source activate "your env name"
 
+### Install mysql.connector library
+!pip install mysql.connector
+
+
+### Dependencies
 import pandas as pd
-import pymysql as mysql
 import os
 import warnings
 import getpass # To hide your local password
+
+### Connect MySQL database using python
+import pymysql as mysql
+
 
 # Integrate your python environment to MySQL database.
 conn = mysql.connect(host='localhost',
@@ -43,6 +52,12 @@ conn = mysql.connect(host='localhost',
                     user = '****',
                     passwd=getpass.getpass('Enter password:'),
                     db="your database")
+                    
+### Create cursor for executing query
+db_cursor = conn.cursor()
+
+### Create database
+db_cursor.execute("CREATE DATABASE "your database name"
 
 df = pd.read_sql_query("Show tables ", conn)
 ```
