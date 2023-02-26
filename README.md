@@ -74,6 +74,7 @@ df = pd.read_sql_query("Show tables ", conn)
 |-     |- Data_Importing.ipynb  
 |-     |- Airbnb_Seattle_Preprocessing.ipynb  
 |-     |- Airbnb_Seattle_Model_Creation.ipynb  
+
 ```
 
 ## Data Source
@@ -83,4 +84,22 @@ The dataset has 3 different CSV files:
 - **Calendar**: This dataset consists of 1.4 million rows and 4 columns. It covers the listing IDs of properties, dates, availability of the property, and the daily price of staying at the property. This dataset can be used to analyze the availability and pricing patterns of the properties listed.<br>
 - **Listings**: This dataset consists of 3,818 rows and 92 columns. It covers various aspects of each listing, such as descriptions and details of the property and host, review scores, location, amenities, etc. This dataset can be used to analyze the characteristics of the listed properties and their hosts.<br>
 - **Reviews**: This dataset consists of 84,849 rows and 6 columns. It focuses on written reviews for stays at each property. This dataset can be used to analyze the feedback and opinions of the guests who have stayed at the listed properties.
+
+
+## Data Importing Structure
+
+- ** Data importing.ipynb
+
+We used Python to connect MySQL to Pandas and created a database, tables, and relationships between them using primary and foreign keys. However, we disabled foreign key checks to avoid loading data into parent tables first and then child tables, and also because some referencing values did not exist in the referenced field of the parent table. While this helped with data loading, we need to be cautious of referential integrity issues that can arise due to disabled foreign key checks.
+
+To avoid such issues, we suggest either removing orphaned rows or updating them to reference a valid identifier in the parent table. Additionally, we recommend inserting the parent table before the child tables during deployment to ensure data consistency.
+
+Furthermore, we created an auto-incrementing column for the primary key in the Calendar table to generate unique identifiers for each row. This will help with efficient indexing and querying of the table. Overall, our approach demonstrates a good understanding of database design principles and their implementation in MySQL using Python.
+
+
+
+
+
+
+
 
