@@ -88,7 +88,7 @@ The dataset has 3 different CSV files:
 
 ## Data Importing Structure
 
-- ** Data importing.ipynb
+- **Data importing.ipynb
 
 We used Python to connect MySQL to Pandas and created a database, tables, and relationships between them using primary and foreign keys. However, we disabled foreign key checks to avoid loading data into parent tables first and then child tables, and also because some referencing values did not exist in the referenced field of the parent table. While this helped with data loading, we need to be cautious of referential integrity issues that can arise due to disabled foreign key checks.
 
