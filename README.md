@@ -90,13 +90,11 @@ The dataset has 3 different CSV files:
 
 - **Data importing.ipynb**
 
-We used Python to connect MySQL to Pandas and created a database, tables, and relationships between them using primary and foreign keys. However, we disabled foreign key checks to avoid loading data into parent tables first and then child tables, and also because some referencing values did not exist in the referenced field of the parent table. While this helped with data loading, we need to be cautious of referential integrity issues that can arise due to disabled foreign key checks.
+To import data into the MySQL database, we utilized Python to establish a connection between MySQL and Pandas. Subsequently, we created a database and developed the schemas for each table. Primary keys and foreign keys were assigned for all tables. However, we opted to disable the foreign key checks to prevent data from being loaded into the parent table first and then the child tables sequentially. This decision was motivated by the existence of some unparented **listing_id** values in the referencing field of the child table, which do not correspond to any valid values in the referenced field of the parent table. While this approach proved useful in facilitating data loading, it is important to exercise caution when working with disabled foreign key checks to avoid referential integrity issues.
 
-To avoid such issues, we suggest either removing orphaned rows or updating them to reference a valid identifier in the parent table. Additionally, we recommend inserting the parent table before the child tables during deployment to ensure data consistency.
+To mitigate the risk of referential integrity issues, we recommend either removing orphaned rows or updating them to reference a valid identifier in the parent table. Additionally, we advise inserting the parent table before the child tables during deployment to ensure data consistency.
 
-Furthermore, we created an auto-incrementing column for the primary key in the Calendar table to generate unique identifiers for each row. This will help with efficient indexing and querying of the table. Overall, our approach demonstrates a good understanding of database design principles and their implementation in MySQL using Python.
-
-
+Furthermore, it is crucial to note that the **listing** table (parent table) must be inserted before the **calendar** and **reviews** tables since they both depend on the listing_id. Finally, to create unique identifiers for each row in the calendar table, we created an auto-incrementing column for its primary key.
 
 
 
