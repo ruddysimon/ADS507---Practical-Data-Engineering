@@ -102,7 +102,7 @@ Furthermore, it is crucial to note that the **listing** table (parent table) mus
 
 ## Data Modeling
 
--**Airbnb_Seattle_Model_Creation.ipynb**
+- **Airbnb_Seattle_Model_Creation.ipynb**
 
 The dataset, named listings, comprises 92 columns, and our objective is to predict the price column using different algorithms. Prior to our prediction analysis, we performed several data preprocessing steps, including the removal of missing values, the conversion of data types, and the utilization of label encoding and dummies for categorical variables. Additionally, we excluded unnecessary columns that do not have any significant impact on the price column.
 
