@@ -76,6 +76,7 @@ df = pd.read_sql_query("Show tables ", conn)
 |-     |- Airbnb_Seattle_Model_Creation.ipynb  
 
 ```
+---
 
 ## Data Source
 
@@ -85,6 +86,7 @@ The dataset has 3 different CSV files:
 - **Listings**: This dataset consists of 3,818 rows and 92 columns. It covers various aspects of each listing, such as descriptions and details of the property and host, review scores, location, amenities, etc. This dataset can be used to analyze the characteristics of the listed properties and their hosts.<br>
 - **Reviews**: This dataset consists of 84,849 rows and 6 columns. It focuses on written reviews for stays at each property. This dataset can be used to analyze the feedback and opinions of the guests who have stayed at the listed properties.
 
+---
 
 ## Data Importing Structure
 
@@ -95,6 +97,20 @@ To import data into the MySQL database, we utilized Python to establish a connec
 To mitigate the risk of referential integrity issues, we recommend either removing unparented rows or updating them to reference a valid identifier in the parent table. Additionally, we advise inserting the parent table before the child tables during deployment to ensure data consistency.
 
 Furthermore, it is crucial to note that the **listing** table (parent table) must be inserted before the **calendar** and **reviews** tables since they both depend on the **listing_id**. Finally, to create unique identifiers for each row in the calendar table, we created an auto-incrementing column for its primary key.
+
+---
+
+## Data Modeling
+
+-**Airbnb_Seattle_Model_Creation.ipynb**
+
+The dataset, named listings, comprises 92 columns, and our objective is to predict the price column using different algorithms. Prior to our prediction analysis, we performed several data preprocessing steps, including the removal of missing values, the conversion of data types, and the utilization of label encoding and dummies for categorical variables. Additionally, we excluded unnecessary columns that do not have any significant impact on the price column.
+
+To enhance the accuracy of our prediction analysis, we utilized multicollinearity analysis to exclude columns that are highly correlated and may negatively impact our forecasting procedure. Overall, our approach demonstrates sound data preprocessing techniques and statistical methods that facilitate the prediction of the price column using different algorithms. To model the dataset and predict the price column, we employed various algorithms, including linear regression, lasso regression, xgboost, and random forest. To evaluate the performance of the models, we used the MAE (mean absolute error) metric. Our analysis revealed that the random forest algorithm achieved the best results among the models tested.
+
+Overall, our study incorporated sound data preprocessing techniques, statistical methods, and state-of-the-art machine learning algorithms to accurately predict the price column of the listings dataset.
+
+
 
 
 
