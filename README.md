@@ -94,7 +94,7 @@ To import data into the MySQL database, we utilized Python to establish a connec
 
 To mitigate the risk of referential integrity issues, we recommend either removing orphaned rows or updating them to reference a valid identifier in the parent table. Additionally, we advise inserting the parent table before the child tables during deployment to ensure data consistency.
 
-Furthermore, it is crucial to note that the **listing** table (parent table) must be inserted before the **calendar** and **reviews** tables since they both depend on the listing_id. Finally, to create unique identifiers for each row in the calendar table, we created an auto-incrementing column for its primary key.
+Furthermore, it is crucial to note that the **listing** table (parent table) must be inserted before the **calendar** and **reviews** tables since they both depend on the **listing_id**. Finally, to create unique identifiers for each row in the calendar table, we created an auto-incrementing column for its primary key.
 
 
 
