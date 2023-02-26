@@ -100,10 +100,9 @@ Furthermore, it is crucial to note that the **listing** table (parent table) mus
 
 ---
 
-ERR Diagram of the tables
+## ERR Diagram
 
 ![alt text](https://github.com/ruddysimon/ADS507-Practical-Data-Engineering-Airbnb_Seattle-/blob/main/ERR%20Diagram.png)
-
 
 ---
 
