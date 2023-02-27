@@ -9,7 +9,6 @@
 
 <h3 align="center">Airbnb Seattle</h3>
 
-
 --- 
 
 ## 🧐 About <a name = "about"></a>
@@ -48,6 +47,7 @@ conn = mysql.connect(host='localhost',
 
 df = pd.read_sql_query("Show tables ", conn)
 ```
+
 ---
 
 ## Project Tree
@@ -62,3 +62,7 @@ df = pd.read_sql_query("Show tables ", conn)
 |-     |- Airbnb_Seattle_Preprocessing.ipynb  
 |-     |- Airbnb_Seattle_Model_Creation.ipynb  
 ```
+
+---
+
+## Data/Source
