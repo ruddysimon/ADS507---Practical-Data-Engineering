@@ -104,13 +104,9 @@ df = pd.read_sql_query("Show tables ", conn)
 
 ---
 
-## Data/Source
-=======
-
-
----
-
 ## Data Source
+
+This endeavor employs the 2016 Seattle AirBnB market data, which has been made available by AirBnB's official Kaggle account. The original source of the data can be accessed via the following link: https://www.kaggle.com/airbnb/seattle
 
 The dataset has 3 different CSV files:
 
