@@ -32,7 +32,7 @@ conda create -n "your env name" python=3.9
 source activate "your env name"
 ```
 
-pip install packages
+Pip install packages
 ```
 ### Install mysql.connector library
 !pip install mysql.connector
@@ -44,7 +44,6 @@ pip install packages
 
 Add dependencies/packages for retrieving data
 ```
-
 ### Dependencies
 import pandas as pd
 import os
@@ -141,6 +140,22 @@ Furthermore, it is crucial to note that the **listing** table (parent table) mus
 
 ## Data Modeling
 
+Packages/Dependencies for modeling
+```
+import xgboost
+
+from math import sqrt
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LinearRegression, ElasticNet, Ridge, Lasso, SGDRegressor
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+from sklearn.ensemble import RandomForestRegressor, AdaBoostRegressor, GradientBoostingRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import cross_val_score
+```
+
 - **Airbnb_Seattle_Model_Creation.ipynb**
 
 The dataset, named listings, comprises 92 columns, and our objective is to predict the price column using different algorithms. Prior to our prediction analysis, we performed several data preprocessing steps, including the removal of missing values, the conversion of data types, and the utilization of label encoding and dummies for categorical variables. Additionally, we excluded unnecessary columns that do not have any significant impact on the price column.
@@ -148,12 +163,3 @@ The dataset, named listings, comprises 92 columns, and our objective is to predi
 To enhance the accuracy of our prediction analysis, we utilized multicollinearity analysis to exclude columns that are highly correlated and may negatively impact our forecasting procedure. Overall, our approach demonstrates sound data preprocessing techniques and statistical methods that facilitate the prediction of the price column using different algorithms. To model the dataset and predict the price column, we employed various algorithms, including linear regression, lasso regression, xgboost, and random forest. To evaluate the performance of the models, we used the MAE (mean absolute error) metric. Our analysis revealed that the random forest algorithm achieved the best results among the models tested.
 
 Overall, our study incorporated sound data preprocessing techniques, statistical methods, and state-of-the-art machine learning algorithms to accurately predict the price column of the listings dataset.
-
-
-
-
-
-
-
-
->>>>>>> fca45ead497acc0f255687bb4709820fd1421ce0
