@@ -30,16 +30,42 @@ Setup your environement and install project dependencies
 ### Create your pandas env
 conda create -n "your env name" python=3.9
 source activate "your env name"
+```
 
+pip install packages
+```
 ### Install mysql.connector library
 !pip install mysql.connector
 
+### Install packages that provides interfaces to AWS including Amazon S3
+!pip install boto3
+!pip install s3fs
+```
+
+Add dependencies/packages for retrieving data
+```
 
 ### Dependencies
 import pandas as pd
 import os
 import warnings
+from mysql.connector import Error
+import getpass
 import getpass # To hide your local password
+
+
+### Connect S3 Bucket to Pandas 
+import boto3
+s3 = boto3.client('s3')
+
+s3 = boto3.resource(
+    service_name='**',
+    region_name='******',
+    aws_access_key_id= getpass.getpass('aws access key:'),
+    aws_secret_access_key= getpass.getpass('aws secret access key:')
+)
+
+
 
 ### Connect MySQL database using python
 import pymysql as mysql
