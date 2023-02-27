@@ -1,4 +1,4 @@
-# ADS507-Practical-Data-Engineering
+# Development of a Data Pipeline for Analyzing Airbnb Seattle Reservation Prices using S3 and MySQL
 
 
 
